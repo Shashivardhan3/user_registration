@@ -3,7 +3,10 @@ from app.forms import *
 from django.http import HttpResponse
 from django.core.mail import send_mail
 # Create your views here.
-# 
+def home(request):
+    return render(request,'home.html')
+
+
 def registration(request):
     USFO=UserForm()
     PFO=ProfileForm()

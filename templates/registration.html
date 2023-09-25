@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% extends 'dummy.html' %}
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,4 +19,24 @@
         </form>
     </center>
 </body>
-</html>
+</html> -->
+
+{% block title %}
+    <title>Registration Page</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+
+<h1>Fill the form and Register</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        {{USFO.as_p}}
+        {{PFO.as_p}}
+
+
+    <input type="submit" value="Register" class="btn btn-primary">
+</form>
+
+{% endblock %}
